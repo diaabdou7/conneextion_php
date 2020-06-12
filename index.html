@@ -1,0 +1,246 @@
+<DOCTYPE html>
+	<html>
+		<head>
+			<meat charset="utf-8">
+			<title>site_connection_php</title>
+			<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		</head>
+		<body>
+
+
+						<nav class="navbar navbar-light" style="background-color: #508cd2;">
+							  <a class="navbar-brand" href="#">Connection php</a>
+							  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="     #navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+							    <span class="navbar-toggler-icon"></span>
+							  </button>
+
+							  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+							    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+							      <li class="nav-item active">
+							        <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+							      </li>
+							  
+							      
+							    </ul>
+							    <form class="form-inline my-2 my-lg-0">
+							      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+							      <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+							    </form>
+							  </div>
+						</nav>
+						 <div class="container-fluid">
+        	 <div class="row">
+        	 	<marquee class="secur">Sauver des vies en appliquant juste les mesures simples, mais efficace.Ensemble lutttons contre le COVID-19, lavez-vous régulièrement vos mains, toussez au coude et non entre les mains. Gestes simple, pour la sauvegarde de la vie</marquee>
+				
+        	 </div>
+	    </div> 
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="le_fond">
+							<h1>
+								Cours langage PHP et base de données MySQL.
+							</h1>
+						</div>
+					</div>
+				
+				
+					<div>
+						<img src ="téléchargement.png" alt="logo_PHP">
+					</div>
+			
+				
+					<div class="le_fond">
+						<h1>Accèder aux bases de données avec PHP</h1>
+					</div>
+					<div>
+						<h3>Introduction</h3>
+						<p>
+							L'intérêt majeur de PHP est son interfaçage avec un grand nombre de bases de données d'une manière relativement simple et efficace.
+Nous a vons vu en introduction que pratiquement tous les SGBD sont pris en charge, mais PHP s'utilise bien souvent avec MySQL, un SGBD rapide (à moyenne charge) et qui satisfait à la plupart des sites Internet, même si il n'a pas encore toutes les potentialités d'autres... Mais rassurons nous, MySQL est exploitable même pour des bases de données de plusieurs Giga-octets et son moteur est basé sur la norme ANSI SQL 92.
+						</p>
+						<p>
+							Nous développerons ici les fonctions PHP qui permettent d'exploiter des bases de données MySQL.
+Pour la visualisation de vos tables et bases de données MySQL nous vous conseillons l'emploi de l'excellent phpMyAdmin qui est une interface en ligne très simple d'utilisation et redoutable dans ses possibilités.
+						</p>
+						<h3>Périmètre et limites</h3>
+						<p>
+							Nous ne passerons pas en revue les différentes commandes SQL mais nous privilégierons leurs interactions avec PHP. Une bonne connaissance préalable des SGBD et des types de données que l'on y trouve est donc nécessaire.
+Enfin, il vous appartient de savoir comment on remplit une base de données manuellement pour son exploitation avec PHP.
+						</p>
+						<h3>Utiliser MySQL avec PHP</h3>
+						<p>
+							Pour se connecter à MySQL via PHP on utilise une API (Application Programming Interface, ou interface de programmation d'application) qui définit les classes, méthodes, fonctions et variables dont votre application va faire usage pour exécuter différentes tâches.
+						</p>
+						<p>
+							Les API peuvent être procédurale ou orientée objet. Avec une API procédurale, vous pouvez appeler les fonctions pour exécuter des commandes ; avec une API orientée objet, vous devez créer des objets et appeler les méthodes de ces objets.
+						</p>
+						<p>
+							Il existe trois API principales pour se connecter à MySQL :
+							<ul>
+								<li>
+									L'extension mysql (pour les versions PHP < 4.1.3)
+								</li>
+								<li>
+									L'extension mysqli (mysql improved pour les versions PHP > 5)
+								</li>
+								<li>
+									PHP Data Objects (PDO) qui a des fonctionnalités moins avancées que mysqli mais permet de travailler avec différentes bases de données en conservant le même code.
+								</li>
+							</ul>
+						</p>
+						<p>
+							Nous utiliserons ici l'extention mysqli avec une syntaxe orientée objet.
+						</p>
+						<h3>
+							Etapes pour se connecter à une base de données
+						</h3>
+						<p>L'exploitation de MySQL avec PHP s'effectue en plusieurs étapes :
+							<ol>
+								<li>
+									ouverture d'une connexion à MySQL et sélection de la base de données
+								</li>
+								<li>requête sur la base de données</li>
+								<li> exploitation des résultats de la requête</li>
+								<li>fermeture de la connexion à MySQL</li>
+
+							</ol>
+						</p>
+						<h3>Ouvrir une connexion la base de données MySQL</h3>
+						<p>
+							Avant d'exploiter les données qui se trouvent sur notre base, il nous faut ouvrir un canal de communication qui ne sera fermé qu'une fois toutes nos opérations effectuées.
+						</p>
+						<p>
+							Notre base de données se trouve sur un serveur désigné avec un nom de domaine, un adresse IP ou un alias. Pour nous y connecter, il nous faut un login et un mot de passe. Tous ces paramètres sont fournis par votre hébergeur lorsque vous ouvre un hébergement.
+						</p>
+						<p>
+							Nous choisirons pour nos exemples les variables suivantes :
+							<div class="php_code" >
+								<p class="blanc_">
+											
+												$serveur = "mysql.monserveursql.com";</br>
+												$base = "mabase";</br>
+												$user = "monuser";</br>
+												$pass = "monpass";</br>
+										
+								</p>
+							</div>
+							<p>
+								Précisons que les informations qui vous sont fournies par votre hébergeur sont confidentielles et ne doivent en aucun cas être communiquées sous peine de voir vos bases modifiées ou détruites par des personnes malintentionnées.
+
+
+							</p>
+							<p>
+								Pour se connecter, on utilise la classe mysqli comme ci-dessous :
+							</p>
+							<p>
+								<div >
+									<p class="blanc_2">
+
+										$serveur = "mysql.monserveursql.com";</br>
+										$base = "mabase";</br>
+										$user = "monuser";</br>
+										$pass = "monpass";</br>
+
+										/*
+										$mysqli est une nouvelle instance de la classe mysqli
+										prédéfinie dans php et hérite donc de ses propriétés et méthodes
+										connexion à la base de données
+										*/
+										$mysqli = new mysqli($serveur, $user, $pass, $base);</br>
+										// si la connexion se fait en UTF-8, sinon ne rien indiquer
+										$mysqli->set_charset("utf8");</br>
+										/*
+										utilisation de la méthode connect_error
+										qui renvoie un message d'erreur si la connexion échoue
+										*/
+										</br>
+										if ($mysqli->connect_error) {
+										    die('Erreur de connexion ('.$mysqli->connect_errno.')'. $mysqli->connect_error);
+										}
+										</br>
+									</p>
+									
+								</div>
+							</p>
+							<p>
+								Ici, nous effectuons un test pour savoir si la connexion est effective ou pas avec l'alias die() (de exit()) : en cas d'échec, le code s'interrompra ici en affichant l'erreur rencontrée par MySQL (donnée dans la méthode connect_error.
+							</p>
+							<p>On pourrait également faire un test plus classique comme ci-dessous :</p>
+							<p>
+								<div >
+										    <p class="php_code blanc_">
+																						
+
+
+																					<str>	if ($mysqli->connect_error) 
+																						{
+																								    echo 'connexion impossible... :'.$mysqli->connect_error;
+																								}
+																								else {
+																								    echo 'connexion réussie : '.$mysqli->host_info;
+												                                                                                                    }</str>
+											</p>
+																					
+								</div>
+							</p>
+							<p>
+								Afin d'éviter de définir vos identifiants de connexion à chaque fois que vous exploitez votre base de données, il est utile de les préciser dans un fichier qui sera appelé à chaque fois via l'instruction include(). Ainsi, vous pourrez facilement les mettre à jour si besoin et renforcerez la sécurité de votre site web (en protégeant l'accès à ce fichier via un fichier .htaccess sur les serveurs Apache).
+							</p>
+							<h3>Fermer la connexion</h3>
+							<p>Normalement, la fermeture de la connexion se fait automatiquement, mais afin de s'en assurer, on peut utiliser la méthode close()</p>
+							<p>
+								<div >
+									<p class="php_code blanc_">
+										$mysqli->close();
+										
+									</p>
+									
+								</div>
+							</p>
+
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<h4>	Ajouter un commentaire</h3>
+						<div>
+									<form class="bordure_haut"> 
+			                            <div class="form-group">
+			                           <label for="exampleInputEmail1">Email address</label>
+			                           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			                             <small id="emailHelp" class="form-text text-muted"></small>
+			                           </div>
+			                            <div class="form-group">
+			                            <label for="exampleInputPassword1">Comment</label>
+			                           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="votre message ici...">
+			                           </div>
+
+			                            <button type="submit" class="btn btn-success">Submit</button>
+			                        </form>
+									
+								</div>
+				</div>
+				<div>
+					<p>Pour les informations supplémentaire <span class="btn btn-dark"><a href="https://www.notre-planete.info/PHP/cours_12.php">Cliquez ici</a></span></p>
+				</div>
+				
+			</div>
+
+
+		<div class="container-fluid">
+				<div class="row">
+					<footer>
+		      	          <h3>copyright &copy 2020</h3>
+		            </footer>
+        
+					
+		</div>
+			
+		</body>
+	</html>

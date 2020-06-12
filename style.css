@@ -1,0 +1,92 @@
+.php_code
+{
+	width:900px;
+	height:100px;
+	background-color: #444444;
+	border:solid blue 2px;
+}
+h3
+{
+	color:#329652;
+
+}
+
+.blanc_
+{
+	color:white;
+}
+
+.le_fond
+{
+	width:900px;
+	height:75px;
+	background-color: green;
+	border-radius: 5px;
+	color:white;
+	position: relative;
+	left:10px;
+	margin-top: 10px;
+	margin-bottom:10px;
+}
+
+img
+{
+	position:relative;
+	left:220px;
+	background-color: #444444;
+}
+body
+{
+	background-color:#F1F1F1;
+}
+
+footer
+{    
+	height:200px;
+	background-color: #480032;
+	width: 100%;
+}
+
+footer h3
+{
+	text-align:center;
+	color:white;
+	background-color:blue;
+}
+
+.comment
+{
+	background-color:#360527;
+	font-size:30px;
+	color:white;
+
+
+}
+
+.secur
+{
+	color:red;
+	font-size:30px;
+
+}
+.ident
+{
+	border: 2px solid #ddd;
+	padding:5px;
+	background-color: #eee;
+
+
+
+}
+.icone
+{
+	background-color:white;
+	padding-bottom:10px;
+	height:40px;
+
+}
+
+body
+{
+	background-color: #778899;
+}
